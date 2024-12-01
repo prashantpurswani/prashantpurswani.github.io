@@ -1,313 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Prashant Purswani's Profile</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prashant Purswani Profile</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+        }
 
-        <link rel="stylesheet" href="styles/style.css">
-    </head>
-    <body>
-        <div class="container main-container">
-            <aside>
-                <section class="profile">
-                    <h3 class="profile-name">Prashant Purswani</h3>
-                </section>
-                <section class="about">
-                    <div class="personal-info">
-                        <img src="styles/assets/laptop-fill.svg" alt="work" class="icon">
-                        <span class="small">Software Engineer</span>
-                    </div>
-                    <div class="personal-info">
-                        <img src="styles/assets/house-door-fill.svg" alt="home" class="icon">
-                        <span class="small">Mumbai, India</span>
-                    </div>
-                    <div class="personal-info">
-                        <img src="styles/assets/envelope-fill.svg" alt="email" class="icon">
-                        <span class="small">prashant.purswani@hotmail.com</span>
-                    </div>
-                    <div class="personal-info">
-                        <img src="styles/assets/telephone-fill.svg" alt="phone" class="icon">
-                        <span class="small">917387624260</span>
-                    </div>
-                    
-                </section>
-                <div class="h-separator"></div>
-                <section class="skills">
-                    <div class="personal-info">
-                        <img src="styles/assets/asterisk.svg" alt="phone" class="icon">
-                        <h5 class="section-header">Skills</h5>
-                    </div>
+        header {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2em 0;
+        }
 
-                    <div class="skill-info">
-                        <label>Java</label>
-                        <div class="progressbar">
-                            <div class="bar w-80">80%</div>
-                        </div>
-                    </div>
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
 
-                    <div class="skill-info">
-                        <label>Spring Boot</label>
-                        <div class="progressbar">
-                            <div class="bar w-80">80%</div>
-                        </div>
-                    </div>
+        header p {
+            margin: 0.5em 0 0;
+            font-size: 1.2em;
+            color: #ecf0f1;
+        }
 
-                    <div class="skill-info">
-                        <label>Javascript</label>
-                        <div class="progressbar">
-                            <div class="bar w-70">70%</div>
-                        </div>
-                    </div>
+        main {
+            padding: 2em;
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
 
-                    <div class="skill-info">
-                        <label>React JS</label>
-                        <div class="progressbar">
-                            <div class="bar w-70">70%</div>
-                        </div>
-                    </div>
+        section {
+            margin-bottom: 2em;
+        }
 
-                    <div class="skill-info">
-                        <label>Cloud (Azure/OCI)</label>
-                        <div class="progressbar">
-                            <div class="bar w-70">70%</div>
-                        </div>
-                    </div>
+        section h2 {
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 0.5em;
+            margin-bottom: 1em;
+            color: #3498db;
+            font-size: 1.5em;
+        }
 
+        section p, section ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
 
-                    <div class="skill-info">
-                        <label>SQL</label>
-                        <div class="progressbar">
-                            <div class="bar w-80">80%</div>
-                        </div>
-                    </div>
+        ul {
+            margin-top: 1em;
+            padding-left: 1.5em;
+        }
 
-                    <div class="skill-info">
-                        <label>REST API Designing</label>
-                        <div class="progressbar">
-                            <div class="bar w-75">75%</div>
-                        </div>
-                    </div>
-                    
-                </section>
-                <div class="h-separator"></div>
+        ul li {
+            margin-bottom: 0.5em;
+            line-height: 1.5;
+        }
 
-                <section class="languages">
-                    <div class="personal-info">
-                        <img src="styles/assets/globe2.svg" alt="phone" class="icon">
-                        <h5 class="section-header">Languages</h5>
-                    </div>
+        ul li strong {
+            color: #2c3e50;
+        }
 
-                    <div class="skill-info">
-                        <label>English</label>
-                        <div class="progressbar">
-                            <div class="bar w-80">80%</div>
-                        </div>
-                    </div>
+        .highlight {
+            color: #e74c3c;
+            font-weight: bold;
+        }
 
-                    <div class="skill-info">
-                        <label>Hindi</label>
-                        <div class="progressbar">
-                            <div class="bar w-80">80%</div>
-                        </div>
-                    </div>
-                    <div class="skill-info">
-                        <label>Sindhi</label>
-                        <div class="progressbar">
-                            <div class="bar w-80">80%</div>
-                        </div>
-                    </div>
-                   
-                   
-                </section>
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
 
-                <div class="h-separator"></div>
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
 
-                <section class="resume">
-                    <div class="personal-info">
-                        <img src="styles/assets/cv.png" alt="resume" class="icon">
-                        <h5 class="section-header">Resume</h5>
-                    </div>
-                    <div class="">
-                        <h6>View my Resume <a href="/docs/prashant_purswani_resume_.pdf"> here</a></h6>
-                    </div>
+        .contact-item span {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-right: 10px;
+        }
 
-                </section>
+        footer {
+            text-align: center;
+            padding: 1em 0;
+            background-color: #2c3e50;
+            color: white;
+        }
 
-                <!-- <div class="h-separator"></div> -->
+        footer a {
+            color: #3498db;
+            text-decoration: none;
+        }
 
-                <!-- <section class="interests">
-                    <div class="personal-info">
-                        <img src="styles/assets/stars.svg" alt="phone" class="icon">
-                        <h5 class="section-header">Interests</h5>
-                    </div>
-                    <div class="">
-                        <h6>Sudoku</h6>
-                    </div>
-                    <div class="">
-                        <h6>Web surfing</h6>
-                    </div>
-                    <div class="">
-                        <h6>Automation</h6>
-                    </div>
-                </section> -->
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Prashant Purswani</h1>
+        <p>Senior Software Engineer | Full Stack Engineer</p>
+    </header>
+    <main>
+        <section id="about-me">
+            <h2>About Me</h2>
+            <p>Hello! I'm <strong>Prashant Purswani</strong>, a Senior Software Engineer with <span > 7+ years of expertise in developing scalable</span> high-performance enterprise applications. Specializing in <strong>Spring Boot, Microservices, React.js, JavaScript, and Java</strong>, I thrive on building innovative solutions and optimizing system architectures. Passionate about driving success through modern technology stacks and agile practices.</p>
+        </section>
 
-            </aside>
-            <main>
+        <section id="technical-skills">
+            <h2>Technical Skills</h2>
+            <ul>
+                <li><strong>Programming Languages:</strong> Java, JavaScript</li>
+                <li><strong>Frameworks:</strong> Spring Boot, Spring Batch, Oracle JET, React, Node.js</li>
+                <li><strong>Cloud & DevOps:</strong> OCI, Azure, Jenkins,</li>
+                <li><strong>Databases:</strong> MySQL, Oracle DB, </li>
+                <li><strong>Tools:</strong> Git, JIRA, VSCode, IntelliJ</li>
+            </ul>
+        </section>
 
-                <Section class = "About Me">
+        <section id="work-experience">
+            <h2>Work Experience</h2>
+            <ul>
+                <li><strong>Software Developer 3 </strong> at <strong>Oracle (OFSS).</strong> (2024 Sep - Present)
+                    <ul>
+                        <li>Led a team of three developers to integrate an external CRM system with the Oracle Banking Collections System, reducing manual efforts for collectors by 80% and delivering significant cost savings.</li>
+                        <li>Collaborated with cross-functional teams to ensure seamless project delivery, demonstrated expertise in software development methodologies, and provided constructive feedback during code reviews to enhance team performance and code quality.</li>
+                    </ul>
+                </li>
+                <li><strong>Software Developer 2</strong> at <strong>Oracle (OFSS)</strong> (2022 Jun - 2024 Aug)
+                    <ul>
+                        <li>Led the migration from monolithic to microservices architecture using Spring Boot, enhancing scalability, performance, and maintainability.</li>
+                        <li>Designed and developed the Tasks Microservice with batch processing and multiple REST APIs, increasing task assignment efficiency by 40% compared to the previous monolithic application.</li>
+						<li>Implemented a Spring Batch process for tracking and updating customer default periods with custom calculation logic, enabling bulk updates and improving performance by 30%.</li>
+						<li>Built an end-to-end Activity Logging screen using Oracle JET (frontend) and Spring Boot (backend) to manage and track transactional activities from other domain microservices.</li>
+						<li>Developed an end-to-end Payments Screen with Oracle JET (frontend) and Spring Boot (backend) to track payments received from defaulted customers.</li>
+                    </ul>
+                </li>
+                <li><strong>I.T. Analyst</strong> at <strong>TATA Consultancy Services</strong> (2017 Nov - 2022 Jun)
+                    <ul>
+						<li>Designed and developed an IRT system for a pharmaceutical client using ReactJS, Spring Boot, and MySQL to record subject trial data for drug development.</li>
+						<li>Developed the backend for a cost/budget optimizer and diagnosis tool using Java and Oracle DB.</li>
+						<li>Created a full-stack forecasting tool with Spring Boot and ReactJS to help customers predict future drug consumption.</li>
+						<li>Built and implemented new features end-to-end as part of ongoing product enhancements.</li>
+                        <li>Developed RESTful APIs and enhanced backend services for high-traffic applications.</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
 
-
-                    <h3 class="main-headers">
-                        <img src="styles/assets/about-me.png" alt="About Me" class="icon work-icon">
-                        <span>About Me</span>
-                    </h3>
-
-                    <p>
-                        I am a Software Engineer with over 5 years of extensive experience in
-                        designing and developing large scale web applications using Technologies like Java,
-                        SpringBoot,Spring Batch,JavaScript,ReactJS,MySQL and Cloud(Azure/OCI).
-                    </p>
-
-                </Section>
-              
-                <section class=" Work Experience">
-
-                    <h3 class="main-headers">
-                        <img src="styles/assets/laptop-fill.svg" alt="work" class="icon work-icon">
-                        <span>Work Experience</span>
-                    </h3>
-
-                    <div class="job">
-                        <h5>
-                            <b>
-                                Software Developer 2 at Oracle(OFSS)
-                            </b>
-                        </h5>
-                        <p class="duration">
-                            <img src="styles/assets/calendar-date-fill.svg" alt="work" class="icon">
-                            <span class="primaryColor">
-                                June 30, 2022 - <span class="current">Current</span>
-                            </span>
-                        </p>
-                        <p>
-                           
-                           <ul>
-                            <li> Designing and Developing Default Collection System for Oracle Banking Business Unit from the Scratch.</li>
-                            <li>Developed Multiple REST API's for Microservice Backend using Spring Boot and Java which helps in multiple transactional use cases in Collection of Defaulted Accounts. </li>
-                            <li>Created Different Frontend Screens using OJET(Oracle Javascript Extension Toolkit) which helps in Admin Maintenance like creating Different Tasks,WorkFlows and etc which helps in managing automated tasks to notify customers about their pending dues.</li>
-                           </ul>
-                        </p>
-                    </div>
-
-                    <div class="h-separator"></div>
-                    <div class="job ">
-                        <h5>
-                            <b>
-                                IT Analyst at TCS(Tata Consultancy Services)
-                            </b>
-                        </h5>
-                        <p class="duration">
-                            <img src="styles/assets/calendar-date-fill.svg" alt="work" class="icon">
-                            <span class="primaryColor">
-                                November 09, 2017 - June 24, 2022
-                            </span>
-                        </p>
-                        <p>
-                           <ul>
-                            <li>
-                                Designed and Developed Shipping Microservice with multiple Rest API's of IRT system for Pharmaceutical Client using SpringBoot in Backend and Oracle DB this helped in capturing Shipment related details of Subject/Patient Trials Data in Drug Development also endpoints are getting consumed in other applications which helps in reusability of similar functionality.
-                            </li>
-
-                            <li>
-                                Designed and Developed Randomization Microservice  of  Pharmaceutical IRT system  using SpringBoot in Backend and Oracle DB this helped in randomizaing patient data and masking the data when fetched from UI or any other consuming system, this helps in reducing biasness in Clinical Trials during Drug Development.
-                            </li>
-
-
-                            <li>
-                                Created a forecasting tool as a full stack Developer by using SpringBoot in backend and ReactJS in frontend, which is helping customers in predicting future consumption of drugs.
-                            </li>
-                            
-
-                            <li>
-                                Implemented Data Pipeline by using Data Fabric tools like(Denodo,Equalum and Airflow) To load new users into DB which has helped in performance improvement by 50%.
-                            </li>
-
-                            <li>
-                                Developed numeric generic features for java based application to improve the product scalability significantly.
-                            </li>
-                           </ul>
-                        </p>
-                    </div>
-
-                 
-
-
-                </section>
-                <section class="education">
-                    <h3 class="main-headers">
-                        <img src="styles/assets/graduation_cap.svg" alt="work" class="icon work-icon">
-                        <span>Education</span>
-                    </h3>
-
-                    <div class="job ">
-                        <h5>
-                            <b>
-                                University of Mumbai
-                            </b>
-                        </h5>
-                        <p class="duration">
-                            <img src="styles/assets/calendar-date-fill.svg" alt="work" class="icon">
-                            <span class="primaryColor">
-                                2020 - 2022
-                            </span>
-                        </p>
-                        <p>
-                            M.S in Computer Science
-                        </p>
-                    </div>
-
-                    <div class="h-separator"></div>
-                    <div class="job ">
-                        <h5>
-                            <b>
-                                University of Mumbai
-                            </b>
-                        </h5>
-                        <p class="duration">
-                            <img src="styles/assets/calendar-date-fill.svg" alt="work" class="icon">
-                            <span class="primaryColor">
-                                2014 - 2017
-                            </span>
-                        </p>
-                        <p>
-                            B.S in Computer Science
-                        </p>
-                    </div>
-
-                </section>
-
-
-            </main>
-
-        </div>
-        <footer>
-            <div class="content">
-                <p>Find me on social media</p>
-                <a target="_blank" href="https://www.instagram.com/purswani_prashant/" title="Instagram">
-                    <img src="styles/assets/instagram.svg" alt="work" class="socialmedia-icon">
-                </a>
-               
-                <a target="_blank" href="https://linkedin.com/in/prashant-purswani-106297141" title="Linkedin">
-                    <img src="styles/assets/linkedin.svg" alt="work" class="socialmedia-icon">
-                </a>
-                <a target="_blank" href="https://github.com/prashantpurswani" title="GitHub">
-                    <img src="styles/assets/github.svg" alt="work" class="socialmedia-icon">
-                </a>
-
+        <section id="contact-me">
+            <h2>Contact Me</h2>
+            <div class="contact-details">
+                <div class="contact-item">
+                    <span>Email:</span>
+                    <a href="mailto:prashant.purswani@hotmail.com">prashant.purswani@hotmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <span>Phone:</span>
+                    <a href="tel:+918329527976">+91 8329527976</a>
+                </div>
+                <div class="contact-item">
+                    <span>LinkedIn:</span>
+                    <a href="https://www.linkedin.com/in/prashant-purswani-106297141/" target="_blank">linkedin.com/in/prashant-purswani-106297141</a>
+                </div>
             </div>
-        </footer>
-
-    </body>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Prashant Purswani. Connect with me on 
+            <a href="https://www.linkedin.com/in/prashant-purswani-106297141/" target="_blank">LinkedIn</a> 
+        </p>
+    </footer>
+</body>
 </html>
